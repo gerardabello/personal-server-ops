@@ -1,0 +1,15 @@
+# Add user
+adduser <user>
+
+# Add user to group
+sudo usermod -aG <group> <user>
+
+# Add authorized ssh keys
+vim ~/.ssh/authorized_keys
+
+# Disable password ssh auth
+vim /etc/ssh/sshd_config #PasswordAuthentication no
+sudo service ssh restart
+
+
+

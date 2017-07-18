@@ -1,7 +1,7 @@
 docker stop serras.xyz
 docker rm serras.xyz
 
-docker run -e -d \
+docker run -d \
   --name=serras.xyz \
   --restart=always \
   -p 80:80 -p 443:443 \

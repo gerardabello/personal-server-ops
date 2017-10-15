@@ -1,0 +1,12 @@
+quicky.shop {
+    proxy / typeshop:80
+}
+
+gaspt.serras.xyz {
+    proxy / gaspt:80
+}
+
+serras.xyz {
+    proxy / serras.xyz:80
+}
+

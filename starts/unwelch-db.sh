@@ -1,10 +1,10 @@
-docker stop unwelchdb
-docker rm unwelchdb
+docker stop unwelch-db
+docker rm unwelch-db
 
 docker run -d \
-  --name=unwelchdb \
+  --name=unwelch-db \
   --restart=always \
-  --hostname=unwelchdb \
+  --hostname=unwelch-db \
   -p 2200:26257 -p 2201:8080 \
   -v "${HOME}/volumes/unwelchdb/cockroach-data:/cockroach/cockroach-data" \
   cockroachdb/cockroach:v1.0 \

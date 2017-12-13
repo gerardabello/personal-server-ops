@@ -1,5 +1,6 @@
 docker stop unwelch-backend
 docker rm unwelch-backend
+docker pull registry.gitlab.com/unwelch/backend
 
 docker run -d --name unwelch-backend \
   -p 2102:3000 \

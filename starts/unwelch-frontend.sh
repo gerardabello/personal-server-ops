@@ -1,5 +1,6 @@
 docker stop unwelch-frontend
 docker rm unwelch-frontend
+docker pull registry.gitlab.com/unwelch/frontend
 
 docker run -d \
   --name=unwelch-frontend \

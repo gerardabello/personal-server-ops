@@ -10,3 +10,7 @@ serras.xyz {
     proxy / serras.xyz:80
 }
 
+unwel.ch {
+    proxy / unwelch-frontend:80
+}
+

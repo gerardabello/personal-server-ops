@@ -10,3 +10,11 @@ serras.xyz {
     proxy / serras.xyz:80
 }
 
+api.unwel.ch {
+    proxy / unwelch-backend:3000
+}
+
+unwel.ch {
+    proxy / unwelch-frontend:9000
+}
+

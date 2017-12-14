@@ -5,7 +5,8 @@ docker pull registry.gitlab.com/unwelch/backend
 docker run -d --name unwelch-backend \
   -p 2102:3000 \
   --restart=always \
-  -e DB_HOST="serras.xyz" \
+  --network=intranet \
+  -e DB_HOST="db.unwel.ch" \
   -e DB_PORT="2200" \
   -e DB_USER="root" \
   -e DB_NAME="postgres" \

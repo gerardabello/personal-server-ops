@@ -15,6 +15,6 @@ api.unwel.ch {
 }
 
 unwel.ch {
-    proxy / unwelch-frontend:9000
+    proxy / unwelch-frontend:80
 }
 

@@ -8,5 +8,5 @@ docker run -d --name unwelch-backend \
   -e DB_HOST="db.unwel.ch" \
   -e DB_PORT="2200" \
   -e DB_USER="root" \
-  -e DB_NAME="postgres" \
+  -e DB_NAME="unwelch" \
   registry.gitlab.com/unwelch/backend

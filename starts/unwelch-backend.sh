@@ -3,7 +3,6 @@ docker rm unwelch-backend
 docker pull registry.gitlab.com/unwelch/backend
 
 docker run -d --name unwelch-backend \
-  -p 2102:3000 \
   --restart=always \
   --network=intranet \
   -e DB_HOST="db.unwel.ch" \

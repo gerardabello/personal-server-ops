@@ -1,0 +1,32 @@
+#cloud-config
+
+package_upgrade: true
+
+users:
+  - name: gerard
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCjgRKS50sr91nZjCASef9BUJF0hqwyDE51OAD4AXXrDh8woarEQ5FE48ve9BOGm938l7LMWdamRdn5YiiMtXxblJUDF8Kp2rVVopcwOLO1AmfyuG+j6glElRx09I3rq5UoIpSvfmAg18cwHxoYI3nSaRUUZIIahcwdjQriijUBzcm3xElLgTV5SO5e5cJFQr0ehz9nGJSHRlWam7j1RuGQbHFECt1OFgANA6YF6odLu1C7eOeCc42AAfPWoQ3yaJXEsJ4pJltc6J+a3Q/v36ai3+fsezU4z/2+McTMMj3xKwEx6mzjMUDKnlk1EYePVYOfdvwCQXrNHweDGI+KIYU5 gerardabello@Gerard-Abellos-MB-Pro.local
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    groups: sudo,docker
+    shell: /bin/bash
+
+runcmd:
+  - sed -i -e '/^PermitRootLogin/s/^.*$/PermitRootLogin no/' /etc/ssh/sshd_config
+  - sed -i -e '/^PasswordAuthentication/s/^.*$/PasswordAuthentication no/' /etc/ssh/sshd_config
+  - sed -i -e '$aAllowUsers gerard' /etc/ssh/sshd_config
+  - restart ssh
+
+packages: ['docker-ce']
+
+apt:
+  preserve_sources_list: true
+
+  sources:
+    curtin-dev-ppa.list:
+      source: "deb [arch=amd64] https://download.docker.com/linux/ubuntu $RELEASE stable"
+      keyid: 0EBFCD88 # GPG key ID published on a key server
+
+power_state:
+  delay: "now"
+  mode: reboot
+  message: First reboot

@@ -1,4 +1,5 @@
 gaspt.serras.xyz {
+    gzip
     proxy / gaspt:80
 }
 
@@ -7,6 +8,7 @@ portainer.serras.xyz {
 }
 
 serras.xyz {
+    gzip
     proxy / serras.xyz:80
 }
 

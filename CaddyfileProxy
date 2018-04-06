@@ -17,6 +17,7 @@ api.unwel.ch {
 }
 
 unwel.ch {
+    gzip
     proxy / unwelch-frontend:80
 }
 

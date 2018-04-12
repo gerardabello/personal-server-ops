@@ -12,6 +12,11 @@ serras.xyz {
     proxy / serras.xyz:80
 }
 
+gerard.sh {
+    gzip
+    proxy / serras.xyz:80
+}
+
 api.unwel.ch {
     proxy / unwelch-backend:3000
 }

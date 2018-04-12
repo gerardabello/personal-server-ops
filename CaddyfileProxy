@@ -3,18 +3,23 @@ gaspt.serras.xyz {
     proxy / gaspt:80
 }
 
+gaspt.gerard.sh {
+    gzip
+    proxy / gaspt:80
+}
+
 portainer.serras.xyz {
     proxy / portainer:9000
 }
 
 serras.xyz {
     gzip
-    proxy / serras.xyz:80
+    proxy / personal-site:80
 }
 
 gerard.sh {
     gzip
-    proxy / serras.xyz:80
+    proxy / personal-site:80
 }
 
 api.unwel.ch {

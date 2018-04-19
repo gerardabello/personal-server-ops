@@ -7,6 +7,7 @@ docker run -d --name unwelch-backend \
   --network=intranet \
   -e DB_HOST="db.unwel.ch" \
   -e DB_PORT="2200" \
+  -e DB_PASSWORD=$UNWELCH_DB_PASSWORD \
   -e DB_USER="root" \
   -e DB_NAME="unwelch" \
   registry.gitlab.com/unwelch/backend

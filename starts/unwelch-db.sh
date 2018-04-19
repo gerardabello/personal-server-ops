@@ -5,7 +5,7 @@ docker run -d \
   --name=unwelch-db \
   --restart=always \
   --hostname=unwelch-db \
-  -p 2200:26257 -p 2201:8080 \
-  -v "${HOME}/volumes/unwelchdb/cockroach-data:/cockroach/cockroach-data" \
-  cockroachdb/cockroach:v1.1.3 \
-  start --insecure --cache=10MiB --max-sql-memory=10MiB
+  -p 2200:5432 \
+  -v "${HOME}/volumes/unwelchdb/data:/var/lib/postgresql/data" \
+  -e POSTGRES_PASSWORD=$UNWELCH_DB_PASSWORD \
+  postgres:10.3 

@@ -3,6 +3,16 @@ gaspt.gerard.sh {
     proxy / gaspt:80
 }
 
+counters.gerard.sh {
+    gzip
+    proxy / counters-frontend:80
+}
+
+api.counters.gerard.sh {
+    gzip
+    proxy / counters-backend:3000
+}
+
 gerard.sh {
     gzip
     proxy / personal-site:80

@@ -6,4 +6,6 @@
 2200 http unwelchdb
 2201 http unwelchdb admin
 
+3200 http countersdb
+
 2300 bandroulette-server

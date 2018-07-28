@@ -1,4 +1,4 @@
-gaspt.gerard.sh {
+pt.gerard.sh {
     gzip
     proxy / gaspt:80
 }

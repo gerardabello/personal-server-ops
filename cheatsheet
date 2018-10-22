@@ -11,3 +11,6 @@ vim ~/.ssh/authorized_keys
 vim /etc/ssh/sshd_config #PasswordAuthentication no
 sudo service ssh restart
 
+#Docker prune (removes enerything not linked to a container)
+docker system prune --all
+

@@ -17,3 +17,8 @@ gerard.sh {
     gzip
     proxy / personal-site:80
 }
+
+lamevamirada.com {
+    gzip
+    proxy / lamevamirada:80
+}
